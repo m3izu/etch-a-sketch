@@ -1,14 +1,19 @@
 body {
     background-color: gray;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
 }
 
 #outside {
     display: flex;
     flex-wrap: wrap;
     aspect-ratio: 1 / 1;
-    max-width: 550px;
+    max-width: 600px;
     max-height: 200px;
-    width: 100%;
-    border: 1px solid black;
+    width: 100%;    
 }
  

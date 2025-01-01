@@ -9,7 +9,7 @@ function sketch(element) {
 
 function createdivforGrid(n) {
     const outside = document.getElementById('outside');
-     
+    
     for (let i = 0; i < n * n; i++) {
         const grid = document.createElement("div");
         grid.id = `grid ${i}`;
@@ -29,6 +29,7 @@ function createdivforGrid(n) {
 }
 
 form.addEventListener('submit', function(event) {
+    document.getElementById('outside').textContent = ' ';
     event.preventDefault();
     const valueGrid = parseInt(document.getElementById('number').value, 10);
     if (!isNaN(valueGrid) && valueGrid > 0) {
