@@ -10,15 +10,18 @@ function sketch(element) {
 function createdivforGrid(n) {
     const outside = document.getElementById('outside');
      
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i < n * n; i++) {
         const grid = document.createElement("div");
         grid.id = `grid ${i}`;
         outside.appendChild(grid);
         grid.style.cssText = `
         border: 1px solid black;
-        padding: 10px;
+        padding: 2px;
+        box-sizing: border-box;
+        text-align: center;
+        flex: 1 0 calc(100% / ${n});
         aspect-ratio: 1 / 1;
-    `;
+    `; 
     grid.onmouseover = function() {
         sketch(this);
     }
